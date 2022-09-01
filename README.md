@@ -3,9 +3,11 @@
 `npm install @cexyboy/smsactivate-api`
 ```js
 const SMSActivate = require('@cexyboy/smsactivate-api')
-
+/*
+   This lib supports every single feature sms-activate has to offer, even some undocumented endpoints.
+   This is just a short example of some methods.
+*/
 const client = new SMSActivate("your_api_key")
-
 (async() => {
     let number = await client.orderNumber("ot", {country: "0"}) // Ordering "any other" service with russian number
     let status = await client.getNumberStatus(number.activationId) // Returns current status for the number
