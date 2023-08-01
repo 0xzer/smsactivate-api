@@ -19,6 +19,7 @@ module.exports = class {
                 return {error: res.replace("BAD_KEY", "INVALID_API_KEY")}
             }
         }
+        return res;
     }
     async requestPost(url, body, headers) {
         let r = await fetch(url, {
