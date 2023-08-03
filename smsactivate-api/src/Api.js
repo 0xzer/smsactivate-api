@@ -22,7 +22,7 @@ class Api {
             {},
             false
         )
-        return this.balance;
+        return this.balance.replace(/^\D+/g, '');
     }
 
     /**
